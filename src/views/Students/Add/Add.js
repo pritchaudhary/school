@@ -62,7 +62,10 @@ const AddStudent = (props) => {
                 <Add />
               </CardBody>
               <CardFooter>
-                <FooterButtons backUrl="/doctor" submitting={submitting} />
+                <FooterButtons
+                  backUrl="/student/list"
+                  submitting={submitting}
+                />
               </CardFooter>
             </Card>
             <pre>{JSON.stringify(values, null, 2)}</pre>

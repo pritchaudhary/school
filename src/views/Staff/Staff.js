@@ -1,5 +1,4 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useState } from "react";
 import {
   Table,
   Progress,
@@ -11,11 +10,14 @@ import {
   Col,
   Input,
 } from "reactstrap";
-import HeaderButton from "../../../components/Common/HeaderButton";
+import Action from "../../components/Common/ActionButtons";
+import HeaderButton from "../../components/Common/HeaderButton";
 
-import Action from "../../../components/Common/ActionButtons";
-
-const List = () => {
+const Staff = () => {
+  const [roleText, setRoleText] = useState("Teacher");
+  const onRoleChange = (e) => {
+    setRoleText(e.target.options[e.target.selectedIndex].text);
+  };
   return (
     <div className="animated fadeIn">
       <Card>
@@ -23,23 +25,15 @@ const List = () => {
           <Row>
             <Col xs="12" md="1">
               <Label>
-                <strong>Class</strong>
+                <strong>Role</strong>
               </Label>
             </Col>
             <Col xs="12" md="3">
-              <select className="form-control">
-                <option>Class 1</option>
-                <option>Class 2</option>
-                <option>Class 3</option>
-                <option>Class 4</option>
-                <option>Class 5</option>
-                <option>Class 6</option>
-                <option>Class 7</option>
-                <option>Class 8</option>
-                <option>Class 9</option>
-                <option>Class 10</option>
-                <option>Class 11</option>
-                <option>Class 12</option>
+              <select className="form-control" onChange={onRoleChange}>
+                <option>Teacher</option>
+                <option>Librarian</option>
+                <option>Accountant</option>
+                <option>Staff</option>
               </select>
             </Col>
             <Col xs="12" md="1">
@@ -49,7 +43,7 @@ const List = () => {
               <Input type="text" placeholder="Search by Name" />
             </Col>
             <Col xs="12" md="4">
-              <HeaderButton toUrl="/student/form" text="Add Student" />
+              <HeaderButton toUrl="/student/form" text={`Add ${roleText}`} />
             </Col>
           </Row>
         </CardHeader>
@@ -391,14 +385,4 @@ const List = () => {
   );
 };
 
-List.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.any)),
-  openModal: PropTypes.func,
-};
-
-List.defaultProps = {
-  data: [],
-  openModal: undefined,
-};
-
-export default List;
+export default Staff;

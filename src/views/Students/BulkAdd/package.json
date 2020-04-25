@@ -1,0 +1,6 @@
+{
+  "name": "BulkAdd",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./BulkAdd.js"
+}

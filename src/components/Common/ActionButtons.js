@@ -9,6 +9,8 @@ const ActionButtons = ({ id, url, openModal }) => {
     <>
       <i className="fa fa-edit fa-lg editIcon pr-1 mt-3" />
       <i className="fa fa-trash fa-lg deleteIcon pr-1 mt-3" />
+      <i className="fa fa-id-card-o fa-lg idCardIcon pr-1 mt-3" />
+
       {/* <Link to={`${url}${id}`} className="pr-1 mt-1">
         <Button color="success" size="sm">
           <i className="fa fa-edit fa-lg" />

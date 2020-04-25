@@ -50,6 +50,9 @@ const ParameterEdit = React.lazy(() =>
 
 const AddStudent = React.lazy(() => import("./views/Students/Add"));
 const StudentList = React.lazy(() => import("./views/Students/List"));
+const BulkAdd = React.lazy(() => import("./views/Students/BulkAdd"));
+const Promotion = React.lazy(() => import("./views/Students/Promotion"));
+const Staff = React.lazy(() => import("./views/Staff"));
 
 const Test = React.lazy(() => import("./views/Test"));
 const Breadcrumbs = React.lazy(() => import("./views/Base/Breadcrumbs"));
@@ -217,14 +220,29 @@ const routes = [
     component: ParameterEdit,
   },
   {
-    path: "/student/add-student",
-    name: "Add Student",
+    path: "/student/form/:id?",
+    name: "Student",
     component: AddStudent,
   },
   {
     path: "/student/list",
     name: "All Student",
     component: StudentList,
+  },
+  {
+    path: "/student/bulk-add",
+    name: "Bulk Add",
+    component: BulkAdd,
+  },
+  {
+    path: "/student/promotion",
+    name: "Promotion",
+    component: Promotion,
+  },
+  {
+    path: "/staff",
+    name: "Staff",
+    component: Staff,
   },
 ];
 
