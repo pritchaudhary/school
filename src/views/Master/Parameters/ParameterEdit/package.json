@@ -1,0 +1,6 @@
+{
+  "name": "ParameterEdit",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ParameterEdit.js"
+}

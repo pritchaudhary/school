@@ -1,0 +1,395 @@
+{
+  // Place your webapp workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "Prop Types": {
+    "prefix": "proptypes",
+    "body": [
+      "import PropTypes from 'prop-types';\n",
+      "$1.propTypes = { };\n",
+      "$1.defaultProps = { };\n",
+      "export default $1;"
+    ],
+    "description": "Connect Components to Redux Store"
+  },
+  "Children Prop Types": {
+    "prefix": "ptc",
+    "body": ["children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,"],
+    "description": "Connect Components to Redux Store"
+  },
+  "Connect Redux": {
+    "prefix": "connect",
+    "body": [
+      "const mapStateToProps = ({ }) => ({});\n",
+      "const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch)\n"
+    ],
+    "description": "Connect Components to Redux Store"
+  },
+  "Import Form Components": {
+    "prefix": "impformc",
+    "body": ["import { FieldLayout, FieldContainer, FieldGroup } from 'components/Common/FormComponents';"],
+    "description": "Import Common Form Components"
+  },
+  "Country Code": {
+    "prefix": "cc",
+    "body": ["<CountryCode", "\tonSelect={selectedValue => onChange(selectedValue)}", "\tselected={value}", "/>"],
+    "description": "Country Code Component"
+  },
+  "Field Group": {
+    "prefix": "fg",
+    "body": [
+      "<FieldGroup",
+      "\tfieldKey='phone'",
+      "\tlabel='Label'",
+      "\tonStateChange={onStateChange}",
+      "\tvalidations={validations}",
+      "\thasErrors={hasErrors}",
+      "\terrors={errors}",
+      "\tformData={formData}",
+      "/>"
+    ],
+    "description": "Field Group Component"
+  },
+  "Field Group Children": {
+    "prefix": "fgc",
+    "body": [
+      "<FieldGroup",
+      "\tfieldKey='phone'",
+      "\tlabel='Label'",
+      "\tonStateChange={onStateChange}",
+      "\tvalidations={validations}",
+      "\thasErrors={hasErrors}",
+      "\terrors={errors}",
+      "\tformData={formData}",
+      ">",
+      "\t{({ value, onChange, inputRef }) => (",
+      "\t\t<RelationshipDropdown selected={value} onSelect={onChange} setRef={inputRef} />",
+      "\t)}",
+      "</FieldGroup>"
+    ],
+    "description": "Field Group with Children Component"
+  },
+  "Use Selector Hook": {
+    "prefix": "ush",
+    "body": "const $1 = useSelector(globalState => globalState.$1);"
+  },
+  "Import Rebass Components": {
+    "prefix": "rebass",
+    "body": "import { Flex, Box } from 'rebass/styled-components';"
+  },
+  "Import Final Form Component": {
+    "prefix": "finalform",
+    "body": [
+      "<Form",
+      "\tinitialValues={state.values}",
+      "\tvalidate={validate}",
+      "\tonSubmit={onFormSubmit}",
+      "\tmutators={{}}",
+      "\trender={({ handleSubmit, submitting, submitError, dirtySinceLastSubmit, values, form }) => (",
+      "\t\t<form onSubmit={handleSubmit}>",
+      "\t\t\t<FormFooter>",
+      "\t\t\t\t<CancelButton disabled={submitting} onClick={() => form.reset()}>Cancel</CancelButton>",
+      "\t\t\t\t<SubmitButton disabled={submitting} loading={submitting} text='Submit'>Cancel</SubmitButton>",
+      "\t\t\t</FormFooter>",
+      "\t\t\t<SubmitError message={submitError} isDirty={dirtySinceLastSubmit} />",
+      "\t\t</form>",
+      "\t)}",
+      "/>"
+    ]
+  },
+  "Import Form Spy": {
+    "prefix": "formspy",
+    "body": [
+      "<FormSpy",
+      "\tsubscription={{ values: true, submitting: true, form: true }}",
+      "\trender={({ values, submitting, form }) => {",
+      "\t\treturn (",
+      "\t\t);",
+      "\t}}",
+      "/>"
+    ]
+  },
+  "New Button": {
+    "prefix": "newbutton",
+    "body": [
+      "<NewLink",
+      "\tlink={`/criteria/new?q=${Math.random().toString(36).substring(7)}`}",
+      "\ttext='New Criteria'",
+      "/>"
+    ]
+  },
+  "Wizard Form": {
+    "prefix": "wizardform",
+    "body": [
+      "import React from 'react';",
+      "import PropTypes from 'prop-types';",
+      "import WizardPage1 from './WizardPage1';",
+      "import WizardPage2 from './WizardPage2';",
+      "import WizardPage3 from './WizardPage3';",
+      "import Wizard from './Wizard';\n",
+      "const WizardForm = ({ onSuccess, ...props }) => {",
+      "\treturn (",
+      "\t\t<Wizard onFormSubmit={onSuccess} {...props}>",
+      "\t\t\t<WizardPage1 />",
+      "\t\t\t<WizardPage2 />",
+      "\t\t\t<WizardPage3 />",
+      "\t\t</Wizard>",
+      "\t);",
+      "};\n",
+      "WizardForm.propTypes = {",
+      "\tonSuccess: PropTypes.func.isRequired",
+      "};\n",
+      "WizardForm.defaultProps = {};\n",
+      "export default WizardForm;"
+    ]
+  },
+  "Wizard Page": {
+    "prefix": "wizardpage",
+    "body": [
+      "import React from 'react';",
+      "import Card from 'components/Shared/Card';",
+      "import { FormBody, RowContainer, Wizard } from 'components/Form';",
+      "import FormTitle from '../FormTitle';\n",
+      "const WizardPage = () => {",
+      "\treturn (",
+      "\t\t<Wizard.Page>",
+      "\t\t\t<Card>",
+      "\t\t\t\t<FormTitle />",
+      "\t\t\t\t<FormBody>",
+      "\t\t\t\t\t<RowContainer mb={[20, 0]}>",
+      "\t\t\t\t\t</RowContainer>",
+      "\t\t\t\t\t<RowContainer pt={[10, 30]}>",
+      "\t\t\t\t\t</RowContainer>",
+      "\t\t\t\t\t<RowContainer>",
+      "\t\t\t\t\t</RowContainer>",
+      "\t\t\t\t</FormBody>",
+      "\t\t\t</Card>",
+      "\t\t</Wizard.Page>",
+      "\t);",
+      "};\n",
+      "export default WizardPage;"
+    ]
+  },
+  "Form Title with Navigation": {
+    "prefix": "formtitlewithnavigation",
+    "body": [
+      "import React from 'react';",
+      "import { FormTitleWithTabs, ColumnContainerRight, ColumnContainerLeft } from 'components/Form';",
+      "import { TextRegular } from 'components/Common/Typography';",
+      "import Navigation from './Navigation';\n",
+      "const Title = () => {",
+      "\t\treturn (",
+      "\t\t\t<FormTitleWithTabs>",
+      "\t\t\t\t<ColumnContainerRight height={60} width={1} alignItems='center' display='flex'>",
+      "\t\t\t\t\t<TextRegular size='large'>Title</TextRegular>",
+      "\t\t\t\t</ColumnContainerRight>",
+      "\t\t\t\t<ColumnContainerLeft width={1}>",
+      "\t\t\t\t\t<Navigation />",
+      "\t\t\t\t</ColumnContainerLeft>",
+      "\t\t\t</FormTitleWithTabs>",
+      "\t\t);",
+      "};\n",
+      "Title.propTypes = {}\n",
+      "Title.defaultProps = {}\n",
+      "export default Title;"
+    ]
+  },
+  "Form Navigation": {
+    "prefix": "formnavigation",
+    "body": [
+      "import React from 'react';",
+      "import { Box } from 'rebass/styled-components';",
+      "import { ColumnContainerLeft } from 'components/Form';",
+      "import { NavTabWrapper } from 'components/Shared/Navigation';",
+      "import NavTab from './NavTab';\n",
+      "const Navigation = () => {",
+      "\treturn (",
+      "\t\t<ColumnContainerLeft width={1}>",
+      "\t\t\t<Box width={1}>",
+      "\t\t\t\t<NavTabWrapper>",
+      "\t\t\t\t\t<NavTab id='nav1' text='Nav1' />",
+      "\t\t\t\t\t<NavTab id='nav2' text='Nav2' />",
+      "\t\t\t\t\t<NavTab id='nav3' text='Nav3' />",
+      "\t\t\t\t</NavTabWrapper>",
+      "\t\t\t</Box>",
+      "\t\t</ColumnContainerLeft>",
+      "\t);",
+      "};\n",
+      "export default Navigation;"
+    ]
+  },
+  "Form Nav": {
+    "prefix": "formnav",
+    "body": [
+      "import React from 'react';",
+      "import PropTypes from 'prop-types';",
+      "import { FormSpy } from 'react-final-form';",
+      "import { NavTab } from 'components/Shared/Navigation';\n",
+      "const Nav = ({ id, text }) => {",
+      "\treturn (",
+      "\t\t<FormSpy",
+      "\t\t\tsubscription={{ submitting: true, values: true, form: true }}",
+      "\t\t\trender={({ submitting, values, form }) => {",
+      "\t\t\t\treturn (",
+      "\t\t\t\t\t<NavTab width={4 / 12} link='/#' isActive={id === values.page} disabled={submitting} onClick={e => { e.preventDefault(); e.stopPropagation(); form.submit(); }}>",
+      "\t\t\t\t\t\t{text}",
+      "\t\t\t\t\t</NavTab>",
+      "\t\t\t\t);",
+      "\t\t\t}}",
+      "\t\t/>",
+      "\t);",
+      "};\n",
+      "Nav.propTypes = {",
+      "\ttext: PropTypes.string.isRequired,",
+      "\tid: PropTypes.number.isRequired",
+      "};\n",
+      "Nav.defaultProps = {};\n",
+      "export default Nav;"
+    ]
+  },
+  "Context": {
+    "prefix": "context",
+    "body": [
+      "import React, { useContext } from 'react';",
+      "import PropTypes from 'prop-types';",
+      "const Context = React.createContext();\n",
+      "const GlobalContext = ({ children, ...props }) => {",
+      "\treturn (",
+      "\t\t<Context.Provider",
+      "\t\t\tvalue={{",
+      "\t\t\t\t...props",
+      "\t\t\t}}",
+      "\t\t>",
+      "\t\t\t{children}",
+      "\t\t</Context.Provider>",
+      "\t);",
+      "};\n",
+      "GlobalContext.propTypes = {",
+      "\tchildren: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,",
+      "\tinitialValues: PropTypes.objectOf(PropTypes.any)",
+      "};\n",
+      "GlobalContext.defaultProps = {",
+      "\tinitialValues: {}",
+      "};\n",
+      "const useGlobalContext = () => {",
+      "\tconst context = useContext(Context);",
+      "\treturn context;",
+      "};\n",
+      "export { GlobalContext, useGlobalContext };"
+    ]
+  },
+  "Container": {
+    "prefix": "container",
+    "body": [
+      "import React from 'react';",
+      "import { Header, Seo, PageBody } from 'components/Pages';\n",
+      "const RouteContainer = () => {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t<Seo title='title' />",
+      "\t\t\t<Header />",
+      "\t\t\t<PageBody sx={{ position: 'relative' }}>",
+      "\t\t\t\t{children}",
+      "\t\t\t</PageBody>",
+      "\t\t</>",
+      "\t);",
+      "};\n",
+      "export default RouteContainer;"
+    ]
+  },
+  "Container Create": {
+    "prefix": "containercreate",
+    "body": [
+      "import React, { useState, useEffect } from 'react';",
+      "import { FORM_ERROR } from 'final-form';",
+      "import { Header, Seo, PageBodyCreate } from 'components/Pages';",
+      "import Loader from 'components/Shared/Loader';",
+      "import Notification from 'components/Common/Notification';",
+      "import Wizard from 'components/Candidate/Nominate/Wizard';",
+      "import WizardPage1 from 'components/Module/WizardPage1';",
+      "import WizardPage2 from 'components/Module/WizardPage2';",
+      "import WizardPage3 from 'components/Module/WizardPage3';",
+      "import { GlobalContext } from 'components/Module/Context';\n",
+      "const RouteContainer = () => {",
+      "\tlet showNotification = null;\n",
+      "\tconst [loading, setLoading] = useState(false);\n",
+      "\tuseEffect(() => {",
+      "\t\tconsole.log(setLoading);",
+      "\t\treturn () => {};",
+      "\t}, []);\n",
+      "\tconst onSubmit = async values => {",
+      "\t\ttry {",
+      "\t\t\tconsole.log(values);",
+      "\t\t\tshowNotification('Request sent successfully');",
+      "\t\t} catch (error) {",
+      "\t\t\treturn { [FORM_ERROR]: error };",
+      "\t\t}",
+      "};\n",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t<Seo title='title' />",
+      "\t\t\t<Header />",
+      "\t\t\t<PageBodyCreate sx={{ position: 'relative' }}>",
+      "\t\t\t\t<Loader loading={loading} />",
+      "\t\t\t\t<GlobalContext loading={loading}>",
+      "\t\t\t\t\t<Wizard onFormSubmit={onSubmit} loading={loading}>",
+      "\t\t\t\t\t\t<WizardPage1 loading={loading} />",
+      "\t\t\t\t\t\t<WizardPage2 loading={loading} />",
+      "\t\t\t\t\t\t<WizardPage3 loading={loading} />",
+      "\t\t\t\t\t</Wizard>",
+      "\t\t\t\t</GlobalContext>",
+      "\t\t\t\t<Notification",
+      "\t\t\t\t\tgetRef={open => {",
+      "\t\t\t\t\t\tshowNotification = open;",
+      "\t\t\t\t\t}}",
+      "\t\t\t\t/>",
+      "\t\t\t</PageBodyCreate>",
+      "\t\t</>",
+      "\t);",
+      "};\n",
+      "export default RouteContainer;"
+    ]
+  },
+  "Use Api Client": {
+    "prefix": "useapiclient",
+    "body": ["import { useApiClient } from 'hooks';", "const { apiClient } = useApiClient();"]
+  },
+  "Load Effect": {
+    "prefix": "useloadeffect",
+    "body": [
+      "const dispatch = useDispatch();",
+      "const { apiClient } = useApiClient();",
+      "const [loading, setLoading] = useState(false);",
+      "const [loaded, setLoaded] = useState(false);",
+      "const data = useSelector(globalState => globalState.accounts.data);\n",
+      "useEffect(() => {",
+      "\tconst loadData = async () => {",
+      "\t\ttry {",
+      "\t\t\tsetLoading(true);",
+      "\t\t\tconst response = await apiClient.get('/accounts/');",
+      "\t\t\tdispatch(set(response));",
+      "\t\t\tsetLoading(false);",
+      "\t\t\tsetLoaded(true);",
+      "\t\t} catch (err) {",
+      "\t\t\tsetLoading(false);",
+      "\t\t\tsetLoaded(true);",
+      "\t\t}",
+      "\t};",
+      "\tif (!loading && !loaded && data === null) loadData();",
+      "}, [dispatch, loading, loaded, data, apiClient]);"
+    ]
+  }
+}

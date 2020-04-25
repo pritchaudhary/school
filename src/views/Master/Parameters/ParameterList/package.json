@@ -1,0 +1,6 @@
+{
+  "name": "ParameterList",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ParameterList.js"
+}
