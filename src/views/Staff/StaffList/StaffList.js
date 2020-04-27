@@ -10,8 +10,8 @@ import {
   Col,
   Input,
 } from "reactstrap";
-import Action from "../../components/Common/ActionButtons";
-import HeaderButton from "../../components/Common/HeaderButton";
+import Action from "../../../components/Common/ActionButtons";
+import HeaderButton from "../../../components/Common/HeaderButton";
 
 const Staff = () => {
   const [roleText, setRoleText] = useState("Teacher");
@@ -43,7 +43,7 @@ const Staff = () => {
               <Input type="text" placeholder="Search by Name" />
             </Col>
             <Col xs="12" md="4">
-              <HeaderButton toUrl="/student/form" text={`Add ${roleText}`} />
+              <HeaderButton toUrl="/staff/form" text={`Add ${roleText}`} />
             </Col>
           </Row>
         </CardHeader>

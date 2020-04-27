@@ -52,7 +52,8 @@ const AddStudent = React.lazy(() => import("./views/Students/Add"));
 const StudentList = React.lazy(() => import("./views/Students/List"));
 const BulkAdd = React.lazy(() => import("./views/Students/BulkAdd"));
 const Promotion = React.lazy(() => import("./views/Students/Promotion"));
-const Staff = React.lazy(() => import("./views/Staff"));
+const StaffList = React.lazy(() => import("./views/Staff/StaffList"));
+const StaffForm = React.lazy(() => import("./views/Staff/StaffForm"));
 
 const Test = React.lazy(() => import("./views/Test"));
 const Breadcrumbs = React.lazy(() => import("./views/Base/Breadcrumbs"));
@@ -240,9 +241,14 @@ const routes = [
     component: Promotion,
   },
   {
-    path: "/staff",
+    path: "/staff/list",
     name: "Staff",
-    component: Staff,
+    component: StaffList,
+  },
+  {
+    path: "/staff/form",
+    name: "Add Staff",
+    component: StaffForm,
   },
 ];
 

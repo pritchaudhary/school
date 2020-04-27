@@ -23,6 +23,12 @@ export default {
       name: "Staff",
       url: "/staff",
       icon: "fa fa-sitemap fa-lg",
+      children: [
+        {
+          name: "Staff List",
+          url: "/staff/list",
+        },
+      ],
     },
 
     // {

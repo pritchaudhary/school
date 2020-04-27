@@ -1,0 +1,6 @@
+{
+  "name": "StaffForm",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./StaffForm.js"
+}
