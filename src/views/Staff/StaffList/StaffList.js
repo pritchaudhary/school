@@ -48,7 +48,7 @@ const Staff = () => {
           </Row>
         </CardHeader>
         <CardBody>
-          <Table hover responsive size="sm">
+          <Table hover responsive bordered size="sm">
             <thead className="thead-light">
               <tr>
                 <th className="text-center">
