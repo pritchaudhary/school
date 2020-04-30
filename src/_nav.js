@@ -54,6 +54,11 @@ export default {
       url: "/parents",
       icon: "fa fa-sitemap fa-lg",
     },
+    {
+      name: "Subject",
+      url: "/subject",
+      icon: "fa fa-sitemap fa-lg",
+    },
 
     {
       name: "Master",

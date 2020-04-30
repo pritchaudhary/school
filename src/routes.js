@@ -58,6 +58,7 @@ const Parents = React.lazy(() => import("./views/Parents"));
 const Classes = React.lazy(() => import("./views/Class/Classes"));
 const Section = React.lazy(() => import("./views/Class/Section"));
 const Syllabus = React.lazy(() => import("./views/Class/Syllabus"));
+const Subject = React.lazy(() => import("./views/Subject"));
 
 const Test = React.lazy(() => import("./views/Test"));
 const Breadcrumbs = React.lazy(() => import("./views/Base/Breadcrumbs"));
@@ -273,6 +274,11 @@ const routes = [
     path: "/class/syllabus",
     name: "Syllabus",
     component: Syllabus,
+  },
+  {
+    path: "/subject",
+    name: "Subject",
+    component: Subject,
   },
 ];
 

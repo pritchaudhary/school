@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 // import { renderRoutes } from 'react-router-config';
 import "./App.scss";
+import { Router } from "react-router";
+import { createBrowserHistory } from "history";
 
 const loading = () => (
   <div className="animated fadeIn pt-3 text-center">Loading...</div>
@@ -18,8 +20,12 @@ const Page500 = React.lazy(() => import("./views/Pages/Page500"));
 
 class App extends Component {
   render() {
+    const history = createBrowserHistory({
+      basename: "/",
+    });
+
     return (
-      <HashRouter>
+      <Router history={history}>
         <React.Suspense fallback={loading()}>
           <Switch>
             <Route
@@ -53,7 +59,7 @@ class App extends Component {
             />
           </Switch>
         </React.Suspense>
-      </HashRouter>
+      </Router>
     );
   }
 }
