@@ -378,5 +378,5 @@ export default {
   //     variant: "danger",
   //     attributes: { target: "_blank", rel: "noopener" },
   //   },
-  // ],
+   ],
 };
