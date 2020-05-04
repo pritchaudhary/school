@@ -67,7 +67,7 @@ const Staff = () => {
                 <td className="text-center">
                   <div className="avatar">
                     <img
-                      src={"../assets/img/avatars/1.jpg"}
+                      src={"assets/img/avatars/1.jpg"}
                       className="img-avatar"
                       alt="admin@bootstrapmaster.com"
                     />
@@ -122,7 +122,7 @@ const Staff = () => {
                 <td className="text-center">
                   <div className="avatar">
                     <img
-                      src={"../assets/img/avatars/2.jpg"}
+                      src={"assets/img/avatars/2.jpg"}
                       className="img-avatar"
                       alt="admin@bootstrapmaster.com"
                     />
@@ -173,7 +173,7 @@ const Staff = () => {
                 <td className="text-center">
                   <div className="avatar">
                     <img
-                      src={"../assets/img/avatars/3.jpg"}
+                      src={"assets/img/avatars/3.jpg"}
                       className="img-avatar"
                       alt="admin@bootstrapmaster.com"
                     />
@@ -227,7 +227,7 @@ const Staff = () => {
                 <td className="text-center">
                   <div className="avatar">
                     <img
-                      src={"../assets/img/avatars/4.jpg"}
+                      src={"assets/img/avatars/4.jpg"}
                       className="img-avatar"
                       alt="admin@bootstrapmaster.com"
                     />
@@ -277,7 +277,7 @@ const Staff = () => {
                 <td className="text-center">
                   <div className="avatar">
                     <img
-                      src={"../assets/img/avatars/5.jpg"}
+                      src={"assets/img/avatars/5.jpg"}
                       className="img-avatar"
                       alt="admin@bootstrapmaster.com"
                     />
@@ -327,7 +327,7 @@ const Staff = () => {
                 <td className="text-center">
                   <div className="avatar">
                     <img
-                      src={"../assets/img/avatars/6.jpg"}
+                      src={"assets/img/avatars/6.jpg"}
                       className="img-avatar"
                       alt="admin@bootstrapmaster.com"
                     />
