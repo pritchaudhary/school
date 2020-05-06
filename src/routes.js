@@ -1,53 +1,5 @@
 import React from "react";
 
-const DoctorList = React.lazy(() =>
-  import("./views/Master/Doctors/DoctorList/DoctorList")
-);
-const DoctorAdd = React.lazy(() => import("./views/Master/Doctors/DoctorAdd"));
-const DoctorEdit = React.lazy(() =>
-  import("./views/Master/Doctors/DoctorEdit")
-);
-
-const DepartmentList = React.lazy(() =>
-  import("./views/Master/Departments/DepartmentList")
-);
-const DepartmentAdd = React.lazy(() =>
-  import("./views/Master/Departments/DepartmentAdd")
-);
-const DepartmentEdit = React.lazy(() =>
-  import("./views/Master/Departments/DepartmentEdit")
-);
-
-const ServiceList = React.lazy(() =>
-  import("./views/Master/Services/ServiceList")
-);
-const ServiceAdd = React.lazy(() =>
-  import("./views/Master/Services/ServiceAdd")
-);
-const ServiceEdit = React.lazy(() =>
-  import("./views/Master/Services/ServiceEdit")
-);
-
-const SubDepartmentList = React.lazy(() =>
-  import("./views/Master/SubDepartments/SubDepartmentList")
-);
-const SubDepartmentAdd = React.lazy(() =>
-  import("./views/Master/SubDepartments/SubDepartmentAdd/SubDepartmentAdd")
-);
-const SubDepartmentEdit = React.lazy(() =>
-  import("./views/Master/SubDepartments/SubDepartmentEdit")
-);
-
-const ParameterList = React.lazy(() =>
-  import("./views/Master/Parameters/ParameterList")
-);
-const ParameterAdd = React.lazy(() =>
-  import("./views/Master/Parameters/ParameterAdd")
-);
-const ParameterEdit = React.lazy(() =>
-  import("./views/Master/Parameters/ParameterEdit")
-);
-
 const AddStudent = React.lazy(() => import("./views/Students/Add"));
 const StudentList = React.lazy(() => import("./views/Students/List"));
 const BulkAdd = React.lazy(() => import("./views/Students/BulkAdd"));
@@ -59,6 +11,9 @@ const Classes = React.lazy(() => import("./views/Class/Classes"));
 const Section = React.lazy(() => import("./views/Class/Section"));
 const Syllabus = React.lazy(() => import("./views/Class/Syllabus"));
 const Subject = React.lazy(() => import("./views/Subject"));
+const StudentAttendance = React.lazy(() =>
+  import("./views/Attendance/Student")
+);
 
 const Test = React.lazy(() => import("./views/Test"));
 const Breadcrumbs = React.lazy(() => import("./views/Base/Breadcrumbs"));
@@ -166,65 +121,7 @@ const routes = [
   { path: "/users", exact: true, name: "Users", component: Users },
   { path: "/users/:id", exact: true, name: "User Details", component: User },
   { path: "/test", name: "Test", component: Test },
-  { path: "/master/doctor", name: "Doctor", component: DoctorList },
-  { path: "/master/doctor-add", name: "Doctor Add", component: DoctorAdd },
-  {
-    path: "/master/doctor-edit/:id",
-    name: "Doctor Edit",
-    component: DoctorEdit,
-  },
 
-  { path: "/master/department", name: "Department", component: DepartmentList },
-  {
-    path: "/master/department-add",
-    name: "Department Add",
-    component: DepartmentAdd,
-  },
-  {
-    path: "/master/department-edit/:id",
-    name: "Department Edit",
-    component: DepartmentEdit,
-  },
-
-  { path: "/master/service", name: "Service", component: ServiceList },
-  { path: "/master/service-add", name: "Service Add", component: ServiceAdd },
-  {
-    path: "/master/service-edit/:id",
-    name: "Service Edit",
-    component: ServiceEdit,
-  },
-
-  {
-    path: "/master/sub-department",
-    name: "Sub Department",
-    component: SubDepartmentList,
-  },
-  {
-    path: "/master/sub-department-add",
-    name: "Sub Department Add",
-    component: SubDepartmentAdd,
-  },
-  {
-    path: "/master/sub-department-edit/:id",
-    name: "Sub Department Edit",
-    component: SubDepartmentEdit,
-  },
-
-  {
-    path: "/master/parameter",
-    name: "Parameter",
-    component: ParameterList,
-  },
-  {
-    path: "/master/parameter-add",
-    name: "Parameter Add",
-    component: ParameterAdd,
-  },
-  {
-    path: "/master/parameter-edit/:id",
-    name: "Parameter Edit",
-    component: ParameterEdit,
-  },
   {
     path: "/student/form/:id?",
     name: "Student",
@@ -279,6 +176,16 @@ const routes = [
     path: "/subject",
     name: "Subject",
     component: Subject,
+  },
+  {
+    path: "/subject",
+    name: "Subject",
+    component: Subject,
+  },
+  {
+    path: "/attendance/student",
+    name: "Student Attendance",
+    component: StudentAttendance,
   },
 ];
 

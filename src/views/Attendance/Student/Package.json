@@ -1,0 +1,6 @@
+{
+  "name": "StudentAttendance",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./StudentAttendance.js"
+}
