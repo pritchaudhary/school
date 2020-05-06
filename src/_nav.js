@@ -4,6 +4,7 @@ export default {
       name: "Students",
       url: "/student",
       icon: "fa fa-address-book-o fa-lg",
+      role: ["student"],
       children: [
         {
           name: "All Student",
@@ -23,6 +24,7 @@ export default {
       name: "Staff",
       url: "/staff",
       icon: "fa fa-sitemap fa-lg",
+      role: ["admin"],
       children: [
         {
           name: "Staff List",
@@ -34,6 +36,7 @@ export default {
       name: "Class",
       url: "/class",
       icon: "fa fa-sitemap fa-lg",
+      role: ["admin"],
       children: [
         {
           name: "Classes",
@@ -42,6 +45,7 @@ export default {
         {
           name: "Section",
           url: "/class/section",
+          role: ["admin"],
         },
         {
           name: "Syllabus",
@@ -53,11 +57,29 @@ export default {
       name: "Parents",
       url: "/parents",
       icon: "fa fa-sitemap fa-lg",
+      role: ["admin"],
     },
     {
       name: "Subject",
       url: "/subject",
       icon: "fa fa-sitemap fa-lg",
+      role: ["admin"],
+    },
+
+    {
+      name: "Attendance",
+      url: "/attendance",
+      icon: "fa fa-address-book-o fa-lg",
+      children: [
+        {
+          name: "Student",
+          url: "/attendance/student",
+        },
+        {
+          name: "Staff",
+          url: "/attendance/staff",
+        },
+      ],
     },
 
     //   {
