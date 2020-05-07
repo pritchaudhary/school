@@ -7,7 +7,6 @@ import {
   Button,
   Card,
   CardBody,
-  Badge,
   Table,
 } from "reactstrap";
 import { AppSwitch } from "@coreui/react";

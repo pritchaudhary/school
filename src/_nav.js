@@ -81,6 +81,29 @@ export default {
         },
       ],
     },
+    {
+      name: "Exam",
+      url: "/exam",
+      icon: "fa fa-address-book-o fa-lg",
+      children: [
+        {
+          name: "Exam List",
+          url: "/exam/list",
+        },
+        {
+          name: "Manage Marks",
+          url: "/exam/manage-marks",
+        },
+        {
+          name: "Send Marks",
+          url: "/exam/send-marks",
+        },
+        {
+          name: "Grades",
+          url: "/exam/grades",
+        },
+      ],
+    },
 
     //   {
     //     name: "Master",

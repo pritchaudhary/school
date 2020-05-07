@@ -24,8 +24,6 @@ const DefaultAside = React.lazy(() => import("./DefaultAside"));
 const DefaultFooter = React.lazy(() => import("./DefaultFooter"));
 const DefaultHeader = React.lazy(() => import("./DefaultHeader"));
 
-const auth = ["student"];
-
 console.log(navigation);
 
 class DefaultLayout extends Component {
