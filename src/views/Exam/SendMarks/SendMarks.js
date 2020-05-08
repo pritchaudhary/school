@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Table,
   Card,
   CardBody,
   Label,
