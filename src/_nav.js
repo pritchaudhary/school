@@ -104,6 +104,11 @@ export default {
         },
       ],
     },
+    {
+      name: "Study Material",
+      url: "/study-material",
+      icon: "fa fa-sitemap fa-lg",
+    },
 
     //   {
     //     name: "Master",

@@ -21,6 +21,7 @@ const ExamList = React.lazy(() => import("./views/Exam/ExamList"));
 const ManageMarks = React.lazy(() => import("./views/Exam/ManageMarks"));
 const SendMarks = React.lazy(() => import("./views/Exam/SendMarks"));
 const Grades = React.lazy(() => import("./views/Exam/Grades"));
+const StudyMaterial = React.lazy(() => import("./views/StudyMaterial"));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
@@ -133,6 +134,11 @@ const routes = [
     path: "/exam/grades",
     name: "Grades",
     component: Grades,
+  },
+  {
+    path: "/study-material",
+    name: "Study Material",
+    component: StudyMaterial,
   },
 ];
 

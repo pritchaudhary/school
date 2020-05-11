@@ -10,10 +10,10 @@ import {
   Input,
   Button,
 } from "reactstrap";
-import Action from "../../../components/Common/ActionButtons";
-import GradeForm from "./GradeForm";
+import Action from "../../components/Common/ActionButtons";
+import StudyMaterialForm from "./StudyMaterialForm";
 
-const GradeList = () => {
+const StudyMaterial = () => {
   const [show, setShow] = useState(false);
 
   const toggle = () => {
@@ -53,9 +53,9 @@ const GradeList = () => {
                   ID
                 </th>
                 <th>Name</th>
-                <th>Grade</th>
-                <th>Mark range</th>
-                <th>Comment</th>
+                <th className="text-center">Email</th>
+                <th>Mobile</th>
+                <th className="text-center">Profession</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -65,11 +65,27 @@ const GradeList = () => {
                   <div className="avatar">1</div>
                 </td>
                 <td>
-                  <div>FIRST</div>
+                  <div>Ketan Jedhe</div>
                 </td>
-                <td>8.0</td>
-                <td>75-100</td>
-                <td>Test</td>
+                <td className="text-center">ketan@jedhe.com</td>
+                <td>9999999999</td>
+                <td className="text-center">CEO</td>
+
+                <td>
+                  <Action />
+                </td>
+              </tr>
+              <tr>
+                <td className="text-center">
+                  <div className="avatar">1</div>
+                </td>
+                <td>
+                  <div>Ketan Jedhe</div>
+                </td>
+                <td className="text-center">ketan@jedhe.com</td>
+                <td>9999999999</td>
+                <td className="text-center">CEO</td>
+
                 <td>
                   <Action />
                 </td>
@@ -78,9 +94,9 @@ const GradeList = () => {
           </Table>
         </CardBody>
       </Card>
-      <GradeForm toggle={toggle} show={show} />
+      <StudyMaterialForm toggle={toggle} show={show} />
     </div>
   );
 };
 
-export default GradeList;
+export default StudyMaterial;
