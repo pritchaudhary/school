@@ -12,11 +12,11 @@ import {
 } from "reactstrap";
 import InputField from "../../components/Common/InputField";
 
-const StudyMaterial = ({ toggle, show }) => {
+const NoticeForm = ({ toggle, show }) => {
   const onFormSubmit = (values) => {};
   return (
     <Modal isOpen={show} toggle={toggle} className="modal-primary">
-      <ModalHeader toggle={toggle}>Study Material</ModalHeader>
+      <ModalHeader toggle={toggle}>Notice</ModalHeader>
       <ModalBody>
         <Form
           onSubmit={onFormSubmit}
@@ -40,17 +40,7 @@ const StudyMaterial = ({ toggle, show }) => {
               </FormGroup>
               <FormGroup row>
                 <Col md="2">
-                  <Label htmlFor="date">date</Label>
-                </Col>
-                <Col xs="12" md="10">
-                  <InputField name="date" type="date" />
-                </Col>
-              </FormGroup>
-              <FormGroup row>
-                <Col md="2">
-                  <Label htmlFor="Description">
-                    Description(Rich Text Box)
-                  </Label>
+                  <Label htmlFor="Description">Description</Label>
                 </Col>
                 <Col xs="12" md="10">
                   <InputField name="Description" type="textarea" />
@@ -58,28 +48,24 @@ const StudyMaterial = ({ toggle, show }) => {
               </FormGroup>
               <FormGroup row>
                 <Col md="2">
-                  <Label htmlFor="Class">Class</Label>
+                  <Label htmlFor="date">date</Label>
                 </Col>
                 <Col xs="12" md="10">
-                  <InputField name="Class" />
+                  <InputField name="date" />
                 </Col>
               </FormGroup>
               <FormGroup row>
                 <Col md="2">
-                  <Label htmlFor="Subject">Subject</Label>
+                  <Label htmlFor="Sms To All">Sms To All</Label>
                 </Col>
                 <Col xs="12" md="10">
-                  <InputField name="Subject" />
+                  <select className="form-control">
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
                 </Col>
               </FormGroup>
-              <FormGroup row>
-                <Col md="2">
-                  <Label htmlFor="File">File</Label>
-                </Col>
-                <Col xs="12" md="10">
-                  <InputField name="File" type="file" />
-                </Col>
-              </FormGroup>
+
               <pre>{JSON.stringify(values, null, 2)}</pre>
             </form>
           )}
@@ -87,7 +73,7 @@ const StudyMaterial = ({ toggle, show }) => {
       </ModalBody>
       <ModalFooter>
         <Button color="primary" onClick={toggle}>
-          Do Something
+          Save
         </Button>{" "}
         <Button color="secondary" onClick={toggle}>
           Cancel
@@ -96,4 +82,4 @@ const StudyMaterial = ({ toggle, show }) => {
     </Modal>
   );
 };
-export default StudyMaterial;
+export default NoticeForm;

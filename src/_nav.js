@@ -3,7 +3,7 @@ export default {
     {
       name: "Students",
       url: "/student",
-      icon: "fa fa-address-book-o fa-lg",
+      icon: "fa fa-mortar-board fa-lg",
       role: ["student"],
       children: [
         {
@@ -23,8 +23,8 @@ export default {
     {
       name: "Staff",
       url: "/staff",
-      icon: "fa fa-sitemap fa-lg",
-      role: ["admin"],
+      icon: "fa fa-list-alt fa-lg",
+
       children: [
         {
           name: "Staff List",
@@ -35,8 +35,8 @@ export default {
     {
       name: "Class",
       url: "/class",
-      icon: "fa fa-sitemap fa-lg",
-      role: ["admin"],
+      icon: "fa fa-language fa-lg",
+
       children: [
         {
           name: "Classes",
@@ -45,7 +45,6 @@ export default {
         {
           name: "Section",
           url: "/class/section",
-          role: ["admin"],
         },
         {
           name: "Syllabus",
@@ -56,20 +55,18 @@ export default {
     {
       name: "Parents",
       url: "/parents",
-      icon: "fa fa-sitemap fa-lg",
-      role: ["admin"],
+      icon: "fa fa-male fa-lg",
     },
     {
       name: "Subject",
       url: "/subject",
       icon: "fa fa-sitemap fa-lg",
-      role: ["admin"],
     },
 
     {
       name: "Attendance",
       url: "/attendance",
-      icon: "fa fa-address-book-o fa-lg",
+      icon: "fa fa-group fa-lg",
       children: [
         {
           name: "Student",
@@ -84,7 +81,7 @@ export default {
     {
       name: "Exam",
       url: "/exam",
-      icon: "fa fa-address-book-o fa-lg",
+      icon: "fa fa-certificate fa-lg",
       children: [
         {
           name: "Exam List",
@@ -107,7 +104,24 @@ export default {
     {
       name: "Study Material",
       url: "/study-material",
-      icon: "fa fa-sitemap fa-lg",
+      icon: "fa fa-book fa-lg",
+    },
+    {
+      name: "Notice",
+      url: "/notice",
+      icon: "fa fa-bullhorn fa-lg",
+    },
+
+    {
+      name: "Settings",
+      url: "/settings",
+      icon: "icon-wrench icons",
+      children: [
+        {
+          name: "General Setting",
+          url: "/settings/general",
+        },
+      ],
     },
 
     //   {
